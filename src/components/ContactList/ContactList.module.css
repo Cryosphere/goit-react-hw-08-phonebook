@@ -1,0 +1,27 @@
+.contactsList {
+    margin-left: 0;
+}
+
+.contactsListItem {
+    padding: 10px 10px 10px 0;
+    font-weight: 500;
+}
+
+.btn {
+    margin-left: 30px;
+    width: 60px;
+    height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(217, 244, 248);
+    background-color: rgb(12, 123, 192);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 5px rgb(85, 84, 84);
+}
