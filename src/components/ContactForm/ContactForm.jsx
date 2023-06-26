@@ -7,7 +7,7 @@ import style from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const contacts = useSelector(state => state.contacts.items);
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export const ContactForm = () => {
 
   const handleNumber = e => {
     const { value } = e.target;
-    setPhone(value);
+    setNumber(value);
   };
 
   const handleSubmit = e => {
@@ -35,11 +35,11 @@ export const ContactForm = () => {
       return;
     }
 
-    const newContact = { id: nanoid(), name, phone };
+    const newContact = { name, number };
     dispatch(addContact(newContact));
 
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   const nameId = nanoid();
@@ -65,7 +65,7 @@ export const ContactForm = () => {
         id={numberId}
         type="tel"
         name="phone"
-        value={phone}
+        value={number}
         onChange={handleNumber}
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

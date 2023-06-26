@@ -1,0 +1,13 @@
+.container {
+    padding: 20px 0;
+    width: 250px;
+}
+
+.paragraph {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 200px
+}
