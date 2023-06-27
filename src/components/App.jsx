@@ -16,6 +16,7 @@ export const App = () => {
   const Register = lazy(() => import('../pages/Register/Register'));
   const Login = lazy(() => import('../pages/Login/Login'));
   const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
+  const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
   useEffect(() => {
     dispatch(refreshUser());
@@ -45,6 +46,8 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<Contacts />} />
           }
         />
+
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

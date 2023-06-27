@@ -38,3 +38,9 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
+export const clearContacts = createAsyncThunk(
+  'contacts/clearContacts',
+  async () => {
+    return;
+  }
+);
